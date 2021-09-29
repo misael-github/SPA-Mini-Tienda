@@ -11284,7 +11284,8 @@ html {
 }
 .page-section .page-section-heading {
   font-size: 2.25rem;
-  line-height: 2rem;
+  /* line-height: 2rem; */
+  /* color: black !important; */
 }
 @media (min-width: 992px) {
   .page-section .page-section-heading {
@@ -11494,4 +11495,7 @@ html {
 
 .copyright {
   background-color: #1a252f;
+}
+.footer_contact{
+  margin-right: 10px;
 }
