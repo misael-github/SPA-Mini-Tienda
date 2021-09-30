@@ -52,3 +52,27 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+function submitForm() {
+    const formEl = document.getElementById("contactForm");
+    const messageEl = document.querySelector(".form-control");
+  
+    formEl.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+      const value = Object.fromEntries(formData.entries());
+      fetch("https://apx-api.vercel.app/api/utils/dwf", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+          to: "dmisael2000@gmail.com",
+          message: `
+          Recibiste un mensaje de: ${value.name}.Mail: ${value.email}. Mensaje: ${value.message}`,
+        }),
+        
+      });
+      messageEl.style.display = "inherit";
+      // messageEl.style.color = "lime";
+      formEl.reset();
+    });
+  }
+submitForm()
