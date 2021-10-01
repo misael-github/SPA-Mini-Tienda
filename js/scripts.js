@@ -52,27 +52,37 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
-function submitForm() {
-    const formEl = document.getElementById("contactForm");
-    const messageEl = document.querySelector(".form-control");
+var load = 0;
+
+document.getElementById('form').onload = function(){
+    /*Execute on every reload on iFrame*/
+    load++;
+    if(load > 1){
+        /*Second reload is a submit*/
+        document.location = "https://www.karvi.com.ar";
+    }
+}
+// function submitForm() {
+//     const formEl = document.getElementById("contactForm");
+//     const messageEl = document.querySelector(".form-control");
   
-    formEl.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const formData = new FormData(e.target);
-      const value = Object.fromEntries(formData.entries());
-      fetch("https://apx-api.vercel.app/api/utils/dwf", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify({
-          to: "dmisael2000@gmail.com",
-          message: `
-          Recibiste un mensaje de: ${value.name}.Mail: ${value.email}. Mensaje: ${value.message}`,
-        }),
+//     formEl.addEventListener("submit", (e) => {
+//       e.preventDefault();
+//       const formData = new FormData(e.target);
+//       const value = Object.fromEntries(formData.entries());
+//       fetch("https://apx-api.vercel.app/api/utils/dwf", {
+//         method: "POST",
+//         headers: { "content-type": "application/json" },
+//         body: JSON.stringify({
+//           to: "dmisael2000@gmail.com",
+//           message: `
+//           Recibiste un mensaje de: ${value.name}.Mail: ${value.email}. Mensaje: ${value.message}`,
+//         }),
         
-      });
-      messageEl.style.display = "inherit";
-      // messageEl.style.color = "lime";
-      formEl.reset();
-    });
-  }
-submitForm()
+//       });
+//       messageEl.style.display = "inherit";
+//       // messageEl.style.color = "lime";
+//       formEl.reset();
+//     });
+//   }
+// submitForm()

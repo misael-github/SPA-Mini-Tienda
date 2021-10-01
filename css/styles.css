@@ -4077,6 +4077,7 @@ textarea.form-control-lg {
   flex-basis: 100%;
   flex-grow: 1;
   align-items: center;
+  border-bottom: solid 2px #C2F784
 }
 
 .navbar-toggler {
@@ -11357,6 +11358,7 @@ html {
 }
 #mainNav .navbar-nav li.nav-item a.nav-link {
   color: #fff;
+  text-align: center;
 }
 #mainNav .navbar-nav li.nav-item a.nav-link:hover {
   color: #C2F784;
