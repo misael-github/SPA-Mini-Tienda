@@ -4059,6 +4059,9 @@ textarea.form-control-lg {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  border-bottom: solid 2px #C2F784;
+  
+
 }
 .navbar-nav .nav-link {
   padding-right: 0;
@@ -4066,6 +4069,7 @@ textarea.form-control-lg {
 }
 .navbar-nav .dropdown-menu {
   position: static;
+  
 }
 
 .navbar-text {
@@ -4077,9 +4081,14 @@ textarea.form-control-lg {
   flex-basis: 100%;
   flex-grow: 1;
   align-items: center;
-  border-bottom: solid 2px #C2F784
+  border-bottom: solid 2px #C2F784;
 }
 
+@media (min-width:975px){
+  .navbar-collapse {
+    border: none !important;
+  }
+}
 .navbar-toggler {
   padding: 0.25rem 0.75rem;
   font-size: 1.25rem;
@@ -4119,6 +4128,12 @@ textarea.form-control-lg {
 }
 
 @media (min-width: 576px) {
+  .navbar-nav{
+    border: none;
+  }
+  .navbar-collapse{
+   
+  }
   .navbar-expand-sm {
     flex-wrap: nowrap;
     justify-content: flex-start;

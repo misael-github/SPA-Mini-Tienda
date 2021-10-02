@@ -1,3 +1,9 @@
+
+        // Swal.fire({
+        //     title: "¡Compra exitosa!",
+        //     text:"Gracias por elegirnos.",
+        //     icon:"success"
+        // })
 /*!
 * Start Bootstrap - Freelancer v7.0.4 (https://startbootstrap.com/theme/freelancer)
 * Copyright 2013-2021 Start Bootstrap
@@ -52,37 +58,84 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
-var load = 0;
+let load = 0;
+const iframe= document.querySelector("iframe")
 
 document.getElementById('form').onload = function(){
-    /*Execute on every reload on iFrame*/
+    /*Ejecuta en cada recarga el iFrame*/
     load++;
     if(load > 1){
-        /*Second reload is a submit*/
-        document.location = "https://www.karvi.com.ar";
-    }
-}
-// function submitForm() {
-//     const formEl = document.getElementById("contactForm");
-//     const messageEl = document.querySelector(".form-control");
-  
-//     formEl.addEventListener("submit", (e) => {
-//       e.preventDefault();
-//       const formData = new FormData(e.target);
-//       const value = Object.fromEntries(formData.entries());
-//       fetch("https://apx-api.vercel.app/api/utils/dwf", {
-//         method: "POST",
-//         headers: { "content-type": "application/json" },
-//         body: JSON.stringify({
-//           to: "dmisael2000@gmail.com",
-//           message: `
-//           Recibiste un mensaje de: ${value.name}.Mail: ${value.email}. Mensaje: ${value.message}`,
-//         }),
+        /*En la segunda recarga ya cambia de pagina*/
         
-//       });
-//       messageEl.style.display = "inherit";
-//       // messageEl.style.color = "lime";
-//       formEl.reset();
-//     });
-//   }
-// submitForm()
+        Swal.fire({
+            title: "¡Compra exitosa!",
+            text:"Gracias por elegirnos.",
+            icon:"success"
+            // title:
+	// text:
+	// html:
+	// icon:
+	// confirmButtonText:
+	// footer:
+	// width:
+	// padding:
+	// background:
+	// grow:
+	// backdrop:
+	// timer:
+	// timerProgressBar:
+	// toast:
+	// position:
+	// allowOutsideClick:
+	// allowEscapeKey:
+	// allowEnterKey:
+	// stopKeydownPropagation:
+
+	// input:
+	// inputPlaceholder:
+	// inputValue:
+	// inputOptions:
+	
+	//  customClass:
+	// 	container:
+	// 	popup:
+	// 	header:
+	// 	title:
+	// 	closeButton:
+	// 	icon:
+	// 	image:
+	// 	content:
+	// 	input:
+	// 	actions:
+	// 	confirmButton:
+	// 	cancelButton:
+	// 	footer:	
+
+	// showConfirmButton:
+	// confirmButtonColor:
+	// confirmButtonAriaLabel:
+
+	// showCancelButton:
+	// cancelButtonText:
+	// cancelButtonColor:
+	// cancelButtonAriaLabel:
+	
+	// buttonsStyling:
+	// showCloseButton:
+	// closeButtonAriaLabel:
+
+
+	// imageUrl:
+	// imageWidth:
+	// imageHeight:
+	// imageAlt:
+        })
+        setTimeout(() => {
+            document.location = "https://xenodochial-curie-170a37.netlify.app/";
+            
+        }, 2000);
+        
+    }
+    
+}
+
