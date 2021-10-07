@@ -4131,9 +4131,7 @@ textarea.form-control-lg {
   .navbar-nav{
     border: none;
   }
-  .navbar-collapse{
-   
-  }
+
   .navbar-expand-sm {
     flex-wrap: nowrap;
     justify-content: flex-start;
@@ -11542,6 +11540,8 @@ html {
 .my-float{
 	margin-top:16px;
 }
-.btn-pagar{
+
+.cards__ocultas{
+
   display: none;
 }
