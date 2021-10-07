@@ -9,9 +9,7 @@
             icon:"success",
             confirmButtonText:`<a style="color:white; text-decoration:none;"; href="index.html">OK</a> `,
             
-        }
-       
-        )
+        })
        
 	// text:
 	// html:

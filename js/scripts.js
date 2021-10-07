@@ -1,18 +1,4 @@
 
-        // Swal.fire({
-        //     title: "¡Compra exitosa!",
-        //     text:"Gracias por elegirnos.",
-        //     icon:"success"
-        // })
-/*!
-* Start Bootstrap - Freelancer v7.0.4 (https://startbootstrap.com/theme/freelancer)
-* Copyright 2013-2021 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-freelancer/blob/master/LICENSE)
-*/
-//
-// Scripts
-// 
-
 window.addEventListener('DOMContentLoaded', event => {
 
     // Navbar shrink function
@@ -58,3 +44,36 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+function habilitarBotonDePago(){
+
+const myIframe = document.getElementById("form")
+const button = document.querySelector(".btn-pagar")
+
+
+let load = 0;
+
+myIframe.onload = function(){
+    /Execute on every reload on iFrame/
+    load++;
+    if(load > 1){
+        /Second reload is a submit/
+        // document.location = "https://www.google.com/search?q=thanks&tbm=isch";
+         Swal.fire({
+            title: "Pago",
+            text:"Método de pago disponible Mercado Pago.",
+            confirmButtonText:`<a style="color:white; text-decoration:none; "; href="https://mpago.la/2eZwHmu">Pagar</a> `,
+            
+            showClass: {
+                popup: 'animate__animated animate__fadeInDown'
+              },
+              hideClass: {
+                popup: 'animate__animated animate__fadeOutUp'
+              },
+            // icon:"success",
+        })
+    }
+}
+
+}
+habilitarBotonDePago() 

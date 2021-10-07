@@ -11542,3 +11542,6 @@ html {
 .my-float{
 	margin-top:16px;
 }
+.btn-pagar{
+  display: none;
+}
