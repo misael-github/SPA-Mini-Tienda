@@ -10,7 +10,7 @@ function enableButtonPayment() {
         // Second reload is a submit
         // document.location = "https://www.google.com/search?q=thanks&tbm=isch";
         Swal.fire({
-          title: "Pago",
+          title: "PAGO",
           text: "Método de pago disponible Mercado Pago.",
           confirmButtonText: `<a style="color:white; text-decoration:none; "; href="https://mpago.la/2eZwHmu">Pagar</a> `,
   
